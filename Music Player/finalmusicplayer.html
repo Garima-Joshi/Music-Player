@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="projectCss\finalmusicplayerStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/f350031ee8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--------------------------Nav Bar-------------------------->
+    <nav>
+        <!--logo-->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQREJIXXnPdKLfaoNWPRL5_StqtHV2K4xfcpA&amp;usqp=CAU" alt="logo">
+
+        <!--search bar-->
+        <form action="" method="">
+            <input type="search" id="SearchInput" placeholder="Search...">
+            <button id="search"><i class="fa fa-search" aria-hidden="true" onclick=""></i></button>
+        </form>
+        <!--bell-->
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        <!--id-->
+        <div id="personId">
+            <div>
+    </nav>
+    <!-------------------------Artist Playlist Iframe---------------------------->
+    <iframe id="playlistFrame" src="artistPlaylist.html"></iframe>
+    <main>
+
+        <!-------------------------------- Carousel----------------------------->
+        <div id="carousel">
+            <div class="container">
+                <input type="radio" name="slider" id="item-1" checked onchange="imageChange('song-3','song-1','song-2')" value=1>
+                <input type="radio" name="slider" id="item-2" value=2 onchange="imageChange('song-1','song-2','song-3')">
+                <input type="radio" name="slider" id="item-3" value=3 onchange="imageChange('song-2','song-3','song-1')">
+
+                <div class="carousel-cards">
+                    <label class="card" for="item-1" id="song-1">
+                        <img src="https://i.ytimg.com/vi/xpetbQQkiro/maxresdefault.jpg" alt="song">
+                    </label>
+                    <label class="card" for="item-2" id="song-2">
+                        <img src="https://i.ytimg.com/vi/RL7yQcjXUis/maxresdefault.jpg" alt="song">
+                    </label>
+                    <label class="card" for="item-3" id="song-3">
+                        <img src="https://resources.tidal.com/images/ee0944a9/2ffb/461e/bfb9/09252ac9b3cd/640x640.jpg" alt="song">
+                    </label>
+                </div>
+                <p>
+            </div>
+            <p class="linkofImage">https://i.ytimg.com/vi/xpetbQQkiro/maxresdefault.jpg</p>
+
+            <p class="linkofImage">https://i.ytimg.com/vi/RL7yQcjXUis/maxresdefault.jpg</p>
+
+            <p class="linkofImage">https://static.roland.com/assets/images/products/gallery/rc_sdz060_edm_essentials_gal.jpg</p>
+
+            <p class="linkofImage">https://i.ytimg.com/vi/D2MvFcIN4oM/maxresdefault.jpg</p>
+
+            <p class="linkofImage">https://resources.tidal.com/images/ee0944a9/2ffb/461e/bfb9/09252ac9b3cd/640x640.jpg</p>
+
+        </div>
+
+
+        <!------------------------------Latest Release--------------------------->
+        <div id="latestRelease">
+            <header>Latest release</header>
+            <div>
+                <div class="relMusic">
+                    <div class="albumImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyy17YTgApaG5tnT4pd8MlSgct5bfWmcb7A&usqp=CAU')"><i class="fa fa-play opac" aria-hidden="true" onclick="play(0,'relMusic',0)"></i></div>
+                    <div class="song name">Perfect Strangers</div>
+                    <div class="date">Aug 11,19</div>
+                    <div class="singer" style="display:none;">Elliot</div>
+                    <div class="time">4:44</div>
+                    <div class="dropdown">
+                        <button onclick="myFunction('latest-release-menu1')">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                            <div class="latest-release menu" id="latest-release-menu1">
+                                <div><i class="fa fa-play" style=" opacity:1;" aria-hidden="true"></i>Play Now</div>
+                                <div><i class="fa fa-plus" aria-hidden="true"></i>Add to Queue</div>
+                                <div>
+                                    <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true" style=" color:red;font-size:0.5rem; margin-left:-19px;"></i>Add to favourites
+                                </div>
+                                <div><i class="fa fa-info-circle" aria-hidden="true"></i>Get info</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="relMusic">
+                    <div class="albumImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyy17YTgApaG5tnT4pd8MlSgct5bfWmcb7A&usqp=CAU')"><i class="fa fa-play opac" aria-hidden="true" onclick="play(1,'relMusic',0)"></i></div>
+                    <div class="song name">Perfect Strangers</div>
+                    <div class="date">Aug 11,19</div>
+                    <div class="singer" style="display:none;">Elliot</div>
+                    <div class="time">4:44</div>
+                    <div class="dropdown">
+                        <button onclick="myFunction('latest-release-menu2')">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                            <div class="latest-release menu" id="latest-release-menu2">
+                                <div><i class="fa fa-play" style=" opacity:1;" aria-hidden="true"></i>Play Now</div>
+                                <div><i class="fa fa-plus" aria-hidden="true"></i>Add to Queue</div>
+                                <div>
+                                    <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true" style=" color:red;font-size:0.5rem; margin-left:-19px;"></i>Add to favourites
+                                </div>
+                                <div><i class="fa fa-info-circle" aria-hidden="true"></i>Get info</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="relMusic">
+                    <div class="albumImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyy17YTgApaG5tnT4pd8MlSgct5bfWmcb7A&usqp=CAU')"><i class="fa fa-play opac" aria-hidden="true" onclick="play(2,'relMusic',0)"></i></div>
+                    <div class="song name">Perfect Strangers</div>
+                    <div class="date">Aug 11,19</div>
+                    <div class="singer" style="display:none;">Elliot</div>
+                    <div class="time">4:44</div>
+                    <div class="dropdown">
+                        <button onclick="myFunction('latest-release-menu3')">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                            <div class="latest-release menu" id="latest-release-menu3">
+                                <div><i class="fa fa-play" style=" opacity:1;" aria-hidden="true"></i>Play Now</div>
+                                <div><i class="fa fa-plus" aria-hidden="true"></i>Add to Queue</div>
+                                <div>
+                                    <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true" style=" color:red;font-size:0.5rem; margin-left:-19px;"></i>Add to favourites
+                                </div>
+                                <div><i class="fa fa-info-circle" aria-hidden="true"></i>Get info</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="relMusic">
+                    <div class="albumImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyy17YTgApaG5tnT4pd8MlSgct5bfWmcb7A&usqp=CAU')"><i class="fa fa-play opac" aria-hidden="true" onclick="play(3,'relMusic',0)"></i></div>
+                    <div class="song name">Perfect Strangers</div>
+                    <div class="date">Aug 11,19</div>
+                    <div class="singer" style="display:none;">Elliot</div>
+                    <div class="time">4:44</div>
+                    <div class="dropdown">
+                        <button onclick="myFunction('latest-release-menu4')">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                            <div class="latest-release menu" id="latest-release-menu4">
+                                <div><i class="fa fa-play" style=" opacity:1;" aria-hidden="true"></i>Play Now</div>
+                                <div><i class="fa fa-plus" aria-hidden="true"></i>Add to Queue</div>
+                                <div>
+                                    <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true" style=" color:red;font-size:0.5rem; margin-left:-19px;"></i>Add to favourites
+                                </div>
+                                <div><i class="fa fa-info-circle" aria-hidden="true"></i>Get info</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-----------------------------Popular Artist----------------------------->
+        <div id="popularArtist">
+            <header>Popular Artist</header>
+            <div>
+                <div class="artist">
+                    <img src="https://i.redd.it/tqyvqdcfpxv61.jpg" class="artistImage"><i class="fa fa-play opac" aria-hidden="true" onclick="OpenPlaylist(0)"></i>
+                    <p class=" artistName name">NCT Dream</p>
+                </div>
+                <div class="artist">
+                    <img src="https://i.redd.it/tqyvqdcfpxv61.jpg" class="artistImage"><i class="fa fa-play opac" aria-hidden="true" onclick="OpenPlaylist(0)"></i>
+                    <p class=" artistName name">NCT Dream</p>
+                </div>
+                <div class="artist">
+                    <img src="https://i.redd.it/tqyvqdcfpxv61.jpg" class="artistImage"><i class="fa fa-play opac" aria-hidden="true" onclick="OpenPlaylist(0)"></i>
+                    <p class=" artistName name">NCT Dream</p>
+                </div>
+                <div class="artist">
+                    <img src="https://i.redd.it/tqyvqdcfpxv61.jpg" class="artistImage"><i class="fa fa-play opac" aria-hidden="true" onclick="OpenPlaylist(0)"></i>
+                    <p class=" artistName name">NCT Dream</p>
+                </div>
+                <div class="artist">
+                    <img src="https://i.redd.it/tqyvqdcfpxv61.jpg" class="artistImage"><i class="fa fa-play opac" aria-hidden="true" onclick="OpenPlaylist(0)"></i>
+                    <p class=" artistName name">NCT Dream</p>
+                </div>
+                <div class="artist">
+                    <img src="https://i.redd.it/tqyvqdcfpxv61.jpg" class="artistImage"><i class="fa fa-play opac" aria-hidden="true" onclick="OpenPlaylist(0)"></i>
+                    <p class=" artistName name">NCT Dream</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------Music Genre------------->
+        <div id="music-genre">
+            <div id="header-image"></div>
+            <div>
+                <div class="genre">
+                    <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmT14MGpSROf39vrastTYZj9hmHs7TW8oVmg&usqp=CAU');">
+                        <div class="musicImage overlay" style="background-color:rgba(154, 152, 35, 0.36);">
+                            <p class="genreName">Retro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="genre">
+                    <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqDIN8f6t8Ewt-nLqD45RBUtbtDyXtZ76NSRqa0d9OOCSpt4YxHPTQaeb9IyOZbbtE0M0&usqp=CAU');background-position:left top;">
+                        <div class="musicImage overlay" style="background-color:rgba(12, 41, 205, 0.28);">
+                            <p class="genreName">Kpop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="genre">
+                    <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRufMtCCy8IONDVaLyJZgQWpVBRf4lQ7DHmog&usqp=CAU');">
+                        <div class="musicImage overlay" style="background-color:rgba(215, 75, 3, 0.5);">
+                            <p class="genreName">Rock</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="genre">
+                    <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqTx-Jy0ITK1XfMNXTZ_SW2QIiNyAz15q9fA&usqp=CAU');">
+                        <div class="musicImage overlay" style="background-color:rgba(146, 3, 215, 0.5);">
+                            <p class="genreName">Disco</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="genre">
+                    <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT38LY0rbN1VX7R_ErsHh3ZoZbiDG_0o5D-aw&usqp=CAU');">
+                        <div class="musicImage overlay" style="background-color:rgba(198, 89, 9, 0.25);padding:22% 6%;">
+                            <p class="genreName">Classical</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="genre">
+                    <div class="musicImage" style="background-image: url('https://media.self.com/photos/5b465324ee9fbc47334813ed/4:3/w_2560%2Cc_limit/GettyImages-966581994.jpg');background-size:130%;">
+                        <div class="musicImage overlay" style="background-color:rgba(77, 214, 163, 0.36);">
+                            <p class="genreName">Pop</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--------------------Music Mood---------------------------->
+        <div class="music-mood">
+            <div class="mood-category" style="background-image: url('https://datenightguide.com/wp-content/uploads/2017/11/visittheusa.co_.uk_.jpg');">
+                <p class="category-name">Road Trip
+            </div>
+            <div class="mood-category" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY91oIgvWLODZKLJGR0MoCumRESjKCS5U2UQ&usqp=CAU');">
+                <p class="category-name">Workout
+            </div>
+            <div class="mood-category" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ07ZaeMFpKQtsbHd8-Ce8dxd4HQkGV65AoGQ&usqp=CAU');">
+                <p class="category-name" style=>Party
+            </div>
+        </div>
+
+
+        <!---------------Most Popular Language-Wise------------->
+        <div id="popular">
+            <div id="music-language">
+                <header> English</header>
+                <div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5pWIRYeLLAMJPR6I3pXSIOJjqVufJZVyMg1aUf99RBgWpW6Ud6x18K-YO5LvCSF6kvEo&usqp=CAU');"><i class="fa fa-play opac" onclick="play(0,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://perticos.files.wordpress.com/2015/12/20151231221410.jpg?w=454');"><i class="fa fa-play opac" onclick="play(1,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSilYs4WTUdxTtdpR1PQFEmHwD31lt35Armdg&usqp=CAU');"><i class="fa fa-play opac" onclick="play(2,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMS3TFzi_eaNDIjsUErr4HKDDD7ACyD7SOHeeNs6OZP1wYnTaTkUl79qeuLsGxko3HkNA&usqp=CAU');"><i class="fa fa-play opac" onclick="play(3,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReqf70NoR4D1dt2pIQPWhDVxGKskLpfPpSaQ0LQrpVWthCtRZ9bDUMaHNa8zDlz29bIbo&usqp=CAU');"><i class="fa fa-play opac" onclick="play(4,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1K5vsNamJ6RELnwq0kqsnDg_5lDEHHNasg&usqp=CAU');"><i class="fa fa-play opac" onclick="play(5,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="music-language">
+                <header> Korean</header>
+                <div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkXzNMKdb22j1-vgsFuFxlXGvIZ_gpQssxVg&usqp=CAU');"><i class="fa fa-play opac" onclick="play(6,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuz-A-DWi8XjkTiUvTGpf1sTMzp_UmHDwPfQ&usqp=CAU');"><i class="fa fa-play opac" onclick="play(7,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4y51NCOIDV8D-dpzEmM05adRmlyT-LFWzxQaRbh3gUgm59xDjMyaXW3AdqaFgzLdL5uI&usqp=CAU');"><i class="fa fa-play opac" onclick="play(8,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbTxxRQ6cFidJzl250mwBhI9OGLdPenMDRk7JEEMAf3nThHzbZkQbs2vsTsErdn9hY9Xk&usqp=CAU');"><i class="fa fa-play opac" onclick="play(9,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://64.media.tumblr.com/59fbb1609d7bd06d1511a6b170aca6f3/9ab6511b1af66ea4-5a/s1280x1920/6cb66d7e85dc1e989071a3c0d745e3810adc840b.png');"><i class="fa fa-play opac" onclick="play(10,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                    <div class="songs">
+                        <div class="musicImage" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfpV-hKRStWU4VVrmsBlvylzMwc9a4DRvmNg&usqp=CAU');"><i class="fa fa-play opac" onclick="play(11,'songs',0)" aria-hidden="true"></i></div>
+                        <p class="song name">Perfect Strangers</p>
+                        <p class="song date">Aug 11,19</p>
+                        <p class="singer" style="display:none;">Elliot</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!------------------Queue------------------------------------------------------->
+
+    <label for="toggle" id="asideToggle"></label>
+    <input type="radio" id="toggle">
+
+    <aside>
+        <header>
+            <button onclick="myFunction('queueMenu')">
+                Queue <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <div class="menu" id="queueMenu">
+                    <div>
+                        <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-play" aria-hidden="true" style=" opacity:1;font-size:0.5rem; margin-left:-19px; top:1px;"></i>Playlist
+                    </div>
+                    <div><i class="fa fa-heart" aria-hidden="true"></i>Favourite Settings</div>
+                </div>
+            </button>
+            <!--<i class="fa fa-times" aria-hidden="true" type="button" onclick="document.getElementsByTagName('aside')[0].style.display='none';"></i>-->
+        </header>
+        <div id="music-queue">
+            <div class="music">
+                <div class="srlNo">01</div>
+                <div class="queueAlbum" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyy17YTgApaG5tnT4pd8MlSgct5bfWmcb7A&usqp=CAU');"><i class="fa fa-play opac" aria-hidden="true" onclick="play(0,'music',1)"></i></div>
+                <div class="song name">Perfect Strangers</div>
+                <div class="liked"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                <div class="singer">Ethene Jhonson</div>
+            </div>
+            <div class="music">
+                <div class="srlNo">02</div>
+                <div class="queueAlbum" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyy17YTgApaG5tnT4pd8MlSgct5bfWmcb7A&usqp=CAU');"><i class="fa fa-play opac" aria-hidden="true" onclick="play(1,'music',1)"></i></div>
+                <div class="song name">Perfect Strangers</div>
+                <div class="liked"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                <div class="singer">Ethene Jhonson</div>
+            </div>
+            <div class="music">
+                <div class="srlNo">03</div>
+                <div class="queueAlbum" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyy17YTgApaG5tnT4pd8MlSgct5bfWmcb7A&usqp=CAU');"><i class="fa fa-play opac" aria-hidden="true" onclick="play(2,'music',1)"></i></div>
+                <div class="song name">Perfect Strangers</div>
+                <div class="liked"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                <div class="singer">Ethene Jhonson</div>
+            </div>
+            <div class="music">
+                <div class="srlNo">04</div>
+                <div class="queueAlbum" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyy17YTgApaG5tnT4pd8MlSgct5bfWmcb7A&usqp=CAU');"><i class="fa fa-play opac" aria-hidden="true" onclick="play(3,'music',1)"></i></div>
+                <div class="song name">Perfect Strangers</div>
+                <div class="liked"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                <div class="singer">Ethene Jhonson</div>
+            </div>
+        </div>
+    </aside>
+</body>
+<!---------------Bottom Music Player------------->
+
+<footer id="bottom-player">
+
+    <div id="current-playing">
+        <div class="Current albumImage" id="curr-album"></div>
+        <div class="song name" id="curr-song">Mirage</div>
+        <div class="singer" id="curr-singer">Ethene Jhonson</div>
+        <div class="liked">
+            <i class="far fa-heart" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <!-------------------Controls----------------------->
+    <div id="controls">
+        <button id="random" onclick=""><i class="fa fa-random" aria-hidden="true"></i></button>
+
+        <button id="prev" onclick=""><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+        <button id="playStop" class="play" onclick="PlayPause()"></button>
+        <button id="next" onclick=""><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+
+        <button id="repeat" onclick="">
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+        </button>
+
+        <div id="song-duration"><span>0:00</span><input type="range" min='0' max="100" value="0" id="duration" onchange="change_Duration()"><span>0:00</span></div>
+
+    </div>
+    <div id="otherControls">
+        <button id="CurrentQueue" onclick=""><i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-play" aria-hidden="true"></i></button>
+        <button onclick="">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </button>
+        <i class="fa fa-volume-up" aria-hidden="true"></i><input type="range" min='0' max="100" value="30" id="vol" onchange="change_Volume()">
+        <button onclick=""><i class="fa fa-expand" aria-hidden="true"></i></button>
+    </div>
+    <audio id="AudioPlayer">
+    </audio>
+</footer>
+<script>
+
+    function myFunction(id) {
+        /*alert(id);*/
+        var menu = document.getElementById(id);
+        var x = window.getComputedStyle(menu, null);
+        /*alert(x);*/
+        if (x.getPropertyValue("display") == "none") {
+            /*alert("if");*/
+            menu.style.display = "block";
+        } else {
+            /*alert("else");*/
+            menu.style.display = "none";
+        }
+    }
+
+    function OpenPlaylist(number) {
+        var playlist = document.getElementById("playlistFrame");
+        playlist.style.display = "block";
+
+        /*body.style.overflow="hidden";*/
+        document.getElementsByTagName("main")[0].style.display = "none";
+        document.getElementsByTagName("aside")[0].style.display = "none";
+
+        var body = document.getElementsByTagName("BODY")[0];
+        body.style.height = "630px"; playlist.style.display = "block";
+    }
+
+    var imageLinks = document.getElementsByClassName("linkofImage");
+    var imageNumbers = imageLinks.length;
+    var i = 0;
+    var prevVal = document.querySelector('input[name="slider"]:checked').value;
+    /*alert(($('input[name="slider"]:checked').attr('id'))*/
+    function imageChange(prevId, id, nextId) {
+
+        if (document.querySelector('input[name="slider"]:checked').value - prevVal == -1 || document.querySelector('input[name="slider"]:checked').value - prevVal == 2) {
+
+            if (i == 0) {
+                i = imageNumbers - 1;
+            }
+            else {
+                i--;
+            }
+        }
+        else {
+            if (i == imageNumbers - 1) {
+                i = 0;
+            }
+            else {
+                i++;
+            }
+        }
+
+        prevVal = document.querySelector('input[name="slider"]:checked').value;
+        var frontImage = document.getElementById(id).children[0];
+        frontImage.src = imageLinks[i].innerHTML;
+        document.getElementById(nextId).children[0].src = imageLinks[(i + 1) % imageNumbers].innerHTML;
+        if (i == 0) {
+            document.getElementById(prevId).children[0].src = imageLinks[imageNumbers - 1].innerHTML;
+        }
+        else {
+            document.getElementById(prevId).children[0].src = imageLinks[i - 1].innerHTML;
+        }
+    }
+
+    /**************Bottom player Control variables**********************************************/
+    var player = document.getElementById("AudioPlayer");
+    var playPause = document.getElementById("playStop");
+    var album = document.getElementById("curr-album");
+    var song = document.getElementById("curr-song");
+    var singer = document.getElementById("curr-singer");
+    var volume = document.getElementById("vol");
+    var songDuration = document.getElementById("song-duration");
+    var durationSlider = document.getElementById("duration");
+    player.volume = volume.value / 100;
+    /********************************************/
+
+    player.onloadedmetadata = function () {
+        songDuration.children[2].innerText = (player.duration / 60).toFixed(2);
+        setInterval(function () {
+            songDuration.children[0].innerText = (player.currentTime / 60).toFixed(2);
+            durationSlider.value = player.currentTime * (100 / player.duration);
+        }, 1000);
+    }
+
+    function PlayPause() {
+
+        if (playPause.className == "play") {
+            player.play();
+            playPause.className = "pause";
+        }
+        else {
+            playPause.className = "play";
+            player.pause();
+        }
+    }
+    /**************************************************************/
+    function play(number, id, i) {
+        if (playPause.className == "pause") {
+            PlayPause();
+        }
+        var selectedSong = document.getElementsByClassName(id)[number].children;
+        /****changing player info****/
+        album.style.backgroundImage = window.getComputedStyle(selectedSong[0 + i], null).getPropertyValue("background-image");
+        var songName = selectedSong[1 + i].innerText;
+        song.innerText = songName;
+        singer.innerText = selectedSong[3 + i].innerText;
+
+
+        /****changing player song****/
+        var source = "songs/" + songName + ".mp3";
+        player.src = source;
+
+        player.load();
+        document.getElementById("bottom-player").style.display = "flex";
+        PlayPause();
+    }
+
+    function change_Volume() {
+        player.volume = volume.value / 100;
+    }
+
+    function change_Duration() {
+        player.currentTime = player.duration * (durationSlider.value / 100);
+        /*alert((player.currentTime / 60).toFixed(2));*/
+        songDuration.children[0].innerText = (player.currentTime / 60).toFixed(2);
+    }
+</script>
+</html>
